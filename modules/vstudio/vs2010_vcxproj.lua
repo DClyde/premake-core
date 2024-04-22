@@ -691,6 +691,7 @@
 				m.treatLinkerWarningAsErrors,
 				m.ignoreDefaultLibraries,
 				m.largeAddressAware,
+				m.profile,
 				m.targetMachine,
 				m.additionalLinkOptions,
 				m.programDatabaseFile,
@@ -1962,6 +1963,12 @@
 	function m.wholeProgramOptimization(cfg)
 		if cfg.flags.LinkTimeOptimization then
 			m.element("WholeProgramOptimization", nil, "true")
+		end
+	end
+
+	function m.profile(cfg)
+		if cfg.profile == "On" then
+			m.element("Profile", nil, "true")
 		end
 	end
 

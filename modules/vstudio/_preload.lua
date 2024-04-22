@@ -197,6 +197,16 @@
 	}
 
 	p.api.register {
+		name = "profile",
+		scope = { "config" },
+		kind = "string",
+		allowed = {
+			"On",
+			"Off"
+		}
+	}
+
+	p.api.register {
 		name = "enablemodules",
 		scope = { "config" },
 		kind = "string",
